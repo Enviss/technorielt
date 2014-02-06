@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Technorielt</title>
+  <title><%= yield(:title) %> | ТехноРиэлт</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<%= render 'layouts/header' %>
+<div id="wrapper">
+  <%= render 'layouts/sidebar' %>
+  <div id="content">
+     <%= yield %>
+  </div>
+</div>
 </body>
 </html>

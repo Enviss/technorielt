@@ -1,5 +1,8 @@
 Technorielt::Application.routes.draw do
+  get "realties/new"
+  get "realties/create"
   get "static_pages/home"
+  root  'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
