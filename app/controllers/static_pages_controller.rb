@@ -5,5 +5,7 @@ class StaticPagesController < ApplicationController
     @realties_p = Realty.where("typeof = 'P'")
 
     @realty=Realty.new
+
+
   end
 end

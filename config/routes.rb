@@ -1,4 +1,5 @@
 Technorielt::Application.routes.draw do
+  get "searches/new"
   resources :realties
   resources :users
   get "static_pages/home"
