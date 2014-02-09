@@ -1,5 +1,6 @@
 <% provide(:title, 'Главная') %>
 <%= render 'layouts/addform' %>
+  <div class="list-table">
   <table class="main-table table-s">
     <thead>
        <tr class="table-header">
@@ -9,15 +10,18 @@
        </tr>
     </thead>
     <tbody>
-      <% @realties_s.each do |realty| %>
-        <tr>
-          <td><%= realty.price %></td>
-          <td><%= realty.comment %></td>
-          <td><%= realty.updated_at.to_s.delete('UTC') %></td>
-        </tr>
+      <% if !@realties_s.blank? %>
+          <% @realties_s.each do |realty| %>
+            <tr>
+              <td><%= realty.price %></td>
+              <td><%= realty.comment %></td>
+              <td><%= realty.updated_at.to_s.delete('UTC') %></td>
+            </tr>
+          <% end %>
       <% end %>
     </tbody>
   </table>
+  </div>
 
 <table class="main-table table-p">
   <thead>
@@ -28,12 +32,14 @@
   </tr>
   </thead>
   <tbody>
-  <% @realties_p.each do |realty| %>
-      <tr>
-        <td><%= realty.price %></td>
-        <td><%= realty.comment %></td>
-        <td><%= realty.updated_at.to_s.delete('UTC') %></td>
-      </tr>
-  <% end %>
+    <% if !@realties_p.blank? %>
+      <% @realties_p.each do |realty| %>
+          <tr>
+            <td><%= realty.price %></td>
+            <td><%= realty.comment %></td>
+            <td><%= realty.updated_at.to_s.delete('UTC') %></td>
+          </tr>
+      <% end %>
+    <% end %>
   </tbody>
 </table>

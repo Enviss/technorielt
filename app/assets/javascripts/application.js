@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
 
@@ -22,4 +23,6 @@ jQuery(document).ready(function($) {
     });
     $(".main-table.table-s").tablesorter();
     $(".main-table.table-p").tablesorter();
+
+    $("#q").attr("placeholder", "Поиск по ID")
 });

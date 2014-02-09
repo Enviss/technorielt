@@ -141,3 +141,17 @@ body {
   @extend .control-group;
   @extend .error;
 }
+
+#q {
+  border: 1px solid #151515;
+  border-radius: 15px;
+  height: 22px;
+  background: #343434 url("/assets/lupa.png") no-repeat 7px center;
+  padding: 0;
+  padding-left: 23px;
+  color: white;
+}
+
+.list-table {
+  border-radius: 5px;
+}
