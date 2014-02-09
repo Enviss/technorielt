@@ -1,7 +1,6 @@
 Technorielt::Application.routes.draw do
-  get "users/new"
-  get "users/create"
   resources :realties
+  resources :users
   get "static_pages/home"
   root  'static_pages#home'
 
