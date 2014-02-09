@@ -1,3 +1,39 @@
 <% provide(:title, 'Главная') %>
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+
+  <table class="main-table table-s">
+    <thead>
+       <tr class="table-header">
+         <th class="price">Цена</th>
+         <th class="info">Информация</th>
+         <th class="Date">Дата</th>
+       </tr>
+    </thead>
+    <tbody>
+      <% @realties_s.each do |realty| %>
+        <tr>
+          <td><%= realty.price %></td>
+          <td><%= realty.comment %></td>
+          <td><%= realty.updated_at.to_s.delete('UTC') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<table class="main-table table-p">
+  <thead>
+  <tr class="table-header">
+    <th class="price">Цена</th>
+    <th class="info">Информация</th>
+    <th class="Date">Дата</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @realties_p.each do |realty| %>
+      <tr>
+        <td><%= realty.price %></td>
+        <td><%= realty.comment %></td>
+        <td><%= realty.updated_at.to_s.delete('UTC') %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

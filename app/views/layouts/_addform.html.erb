@@ -1,0 +1,12 @@
+<div class="addform">
+<%= form_for(@realty) do |f| %>
+      <%= f.text_field :price, placeholder: "Цена" %>
+      <%= f.text_area :comment, placeholder: "Дополнительная информация" %>
+      <%= f.radio_button :typeof, "S" %>
+      <%= label_tag(:typeof_S, "Спрос") %>
+      <%= f.radio_button :typeof, "P" %>
+      <%= label_tag(:typeof_P, "Предложение") %>
+
+    <%= f.submit "Добавить", class: "btn btn-large btn-primary" %>
+<% end %>
+</div>
